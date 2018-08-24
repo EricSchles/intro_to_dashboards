@@ -1,0 +1,12 @@
+import code
+def decorator(f):
+    def internal(*args, **kwargs):
+        return f(args)
+    return internal
+
+@decorator
+def func(x, y=0):
+    return x
+
+
+code.interact(local=locals())
